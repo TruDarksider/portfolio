@@ -1,0 +1,17 @@
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3vh;
+}
+
+img{
+    width: 40vw;
+}
+
+.project-card{
+    background-color: white;
+    color: black;
+    max-width: 80vw;
+}
