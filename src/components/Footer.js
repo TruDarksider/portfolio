@@ -8,7 +8,7 @@ function Footer(){
             <span>406.696.7640</span><br/>
             <span>tyler.hopkin12@gmail.com</span><br/><br/>
             <span>Pflugerville, TX</span><br/>
-            <span>But willing to relocate, especially to Portland or Seattle.</span>
+            <span>But willing to relocate to the Pacific Northwest.</span>
         </div>
     )
 }
