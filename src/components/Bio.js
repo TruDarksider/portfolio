@@ -8,7 +8,7 @@ function Bio(){
         <div className="bio">
             <h1>Tyler Hopkin</h1>
             <h2>About Me</h2>
-            <p>Loves playing games of all sorts, but mainly plays Destiny 2. Like, too much probably. Has a Bachelor's of Science degree in Applied Physics (Acoustics Emphasis) from Brigham Young University. Spent 6 years as an Audio/Video technician but now seeks respite among the math and logics of a web/app developer career. </p>
+            <p>Loves playing games of all sorts, but mainly plays Destiny 2. Like, too much probably. Earned a Bachelor's of Science in Applied Physics (Acoustics Emphasis) from Brigham Young University. Spent 6 years as an Audio/Video technician but now seeks respite among the math and logics of a web/app developer career. </p>
             <ul className='external-bio-links'>
                 <li>
                     <a href='https://github.com/TruDarksider'>
