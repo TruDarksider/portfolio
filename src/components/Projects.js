@@ -1,6 +1,7 @@
 import '../stylesheets/Projects.css'
 import warlock from '../D2Warlock.png';
 import mbScreenshot from '../images/MessageBoard.png'
+import ktScreenshot from '../images/KnightTravails.png'
 import github from '../github-original.svg'
 
 function Projects(){
@@ -35,12 +36,12 @@ function Projects(){
                     <p>Use your mouse to mimic a classic toy inside a browser window.</p>
                 </div>
                 <div className='project-card'>
-                        <img alt='' src={warlock} />
+                        <img alt='' src={ktScreenshot} />
                         <div class='card-title'>
                         <a href='https://trudarksider.github.io/knight-travails/' target="_blank" rel='noreferrer'><h2>Knight Travails</h2></a>
                         <a href='https://github.com/TruDarksider/knight-travails' target="_blank" rel='noreferrer'><img alt="GitHub logo linking to Knight Travails repository" src={github} className='externalLink' /></a>
                         </div>
-                    <p>Find the shortest route for a knight to reach a particular spot on a chessboard. Uses a graph data structure to plot the course.</p>
+                    <p>Finds the shortest route for a knight to reach a particular spot on a chessboard. Uses a graph data structure to plot the course. Board origin is [0,0] in the top left and goes to [7,7] located in the bottom right.</p>
                 </div>
                 <div className='project-card'>
                         <img alt='' src={warlock} />
