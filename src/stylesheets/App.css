@@ -1,5 +1,21 @@
+:root {
+  --red: #AA1155;
+  --orage: #D45113;
+  --white: #F1E4F3;
+  --green: #94C9A9;
+  --blue: #2C666E;
+}
+
 .App {
   text-align: center;
+
+    background-color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: calc(10px + 2vmin);
+      color: black;
 }
 
 .App-logo {
@@ -8,13 +24,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {

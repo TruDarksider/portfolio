@@ -1,8 +1,16 @@
 @keyframes colorFun {
-    0% {color: rgb(0, 131, 131);}
-    50% {color: hotpink;}
-    100% {color:blueviolet;}
+    0% {color: var(--blue);}
+    50% {color: var(--green);}
+    100% {color:var(--orage);}
     
+}
+
+:root {
+    --red: #AA1155;
+    --orage: #D45113;
+    --white: #F1E4F3;
+    --green: #94C9A9;
+    --blue: #2C666E;
 }
 
 a, a:visited {
@@ -26,8 +34,8 @@ a:hover {
 } */
 
 .card-container {
-    width: 100vw;
-    height: 100vh;
+    width: 80vw;
+    height: 50vh;
     position: relative;
 }
 
@@ -39,7 +47,7 @@ a:hover {
 
 .carouselBtn {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background: none;
     border: none;
     font-size: 4rem;
@@ -63,11 +71,11 @@ a:hover {
 }
 
 .carouselBtn.prev{
-    left: 1rem;
+    left: -5rem;
 }
 
 .carouselBtn.next {
-    right: 1rem;
+    right: -5rem;
 }
 
 img{
@@ -83,9 +91,17 @@ img{
     border-radius: 10px;
 } */
 
+.project-area{
+    height: 100vh;
+    flex: 1 0 auto;
+}
+
 .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    background-color: rgb(200, 227, 250);
+    background-color: var(--red);
     inset: 0;
     opacity: 0;
     transition: 200ms opacity ease-in-out;
@@ -94,7 +110,7 @@ img{
 
 .project-card[data-active]{
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
     transition-delay: 0ms;
 }
 

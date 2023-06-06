@@ -1,5 +1,15 @@
+:root {
+    --red: #AA1155;
+    --orage: #D45113;
+    --white: #F1E4F3;
+    --green: #94C9A9;
+    --blue: #2C666E;
+}
+
 .bio{
-    background-color: rgb(156, 8, 255);
+    background-color: var(--blue);
+    padding-top: 10vh;
+    height: 100vh;
 }
 
 .external-bio-links{
