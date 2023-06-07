@@ -6,9 +6,18 @@
     --blue: #2C666E;
 }
 
+#bottom {
+    margin-bottom: 2rem;
+}
+
 .footer{
     background-color: var(--orage);
+    width: 100%;
     text-align: left;
-padding-top: 10vh;
+    padding-top: 10vh;
     flex-shrink: 0;
+}
+
+h1,p,span{
+    padding-left: 1rem;
 }

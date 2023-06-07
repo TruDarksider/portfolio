@@ -32,3 +32,11 @@ li {
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width:800px) {
+    .bio {
+            background-color: var(--blue);
+            padding-top: 10vh;
+            height: 30vh;
+        }
+}

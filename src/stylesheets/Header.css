@@ -40,3 +40,13 @@
     top: 0;
     width: 100%
 }
+
+@media screen and (max-width:800px){
+    .name{
+        font-size: 0;
+    }
+
+    .pfp{
+        height: 3rem;
+    }
+}
