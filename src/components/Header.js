@@ -9,9 +9,9 @@ function Header() {
           <div className="name">Tyler Hopkin</div>
         </div>
         <div className="linkContainer">
-          <div className="link">About Me</div>
-          <div className="link">Projects</div>
-          <div className="link">Contact</div>
+          <a className="link" href='#about'>About Me</a>
+          <a className="link" href='#projects'>Projects</a>
+          <a className="link" href='#contact'>Contact</a>
         </div>
       </div>
     );
