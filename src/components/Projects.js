@@ -29,7 +29,7 @@ function Projects(){
 }
 
     return (
-      <div className="project-area">
+      <div className="project-area" id='projects'>
         <h1>My Work</h1>
         <p>
           Title is a link to a live deployment, github image links to code. All

@@ -9,6 +9,6 @@
 .footer{
     background-color: var(--orage);
     text-align: left;
-
+padding-top: 10vh;
     flex-shrink: 0;
 }

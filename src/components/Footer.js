@@ -2,7 +2,7 @@ import '../stylesheets/Footer.css'
 
 function Footer(){
     return(
-        <div className='footer'>
+        <div className='footer' id='contact'>
             <h1>Like what you see?</h1>
             <p>Let's talk about working together!</p>
             <span>406.696.7640</span><br/>

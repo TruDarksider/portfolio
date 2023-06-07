@@ -5,7 +5,7 @@ import github from '../github-original.svg'
 function Bio(){
 
     return (
-        <div className="bio">
+        <div className="bio" id='about'>
             {/* <div className='nameAndPic'>
                 <h1>Tyler Hopkin</h1>
                 <img alt='Headshot of Tyler Hopkin' src={warlock} />
