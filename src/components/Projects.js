@@ -8,14 +8,21 @@ import github from '../github-original.svg'
 
 function Projects(){
 
-  const changeSlide = () => {
-    const buttons = document.querySelectorAll('[data-carousel-button]')
-    buttons.forEach(button => {
-      const offset = button.dataset.carouselBtn === "next" ? 1 : -1;
-      const slides = button.closest("[data-carousel").querySelector("[data-slides");
+  const changeSlide = (e) => {
+    //const buttons = document.querySelectorAll('[data-carousel-button]')
+    
+    //buttons.forEach(button => {
+      const offset = e.target.classList.contains("next") ? 1 : -1;
+      //const slides = button.closest("[data-carousel]").querySelector("[data-slides]");
+    const slides = e.target
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
+    const dots = document.querySelector('[data-dots]');
 
       const activeSlide = slides.querySelector("[data-active]");
+      const activeDot = dots.querySelector('[data-active]')
       let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+      
       if (newIndex < 0) {
         newIndex = slides.children.length - 1;
       }
@@ -24,22 +31,55 @@ function Projects(){
       }
 
       slides.children[newIndex].dataset.active = true;
+      dots.children[newIndex].dataset.active = true;
       delete activeSlide.dataset.active;
-    })
-}
+      delete activeDot.dataset.active;
+  //})
+  }
+  
+  const goToIndex = (e) => {
+    //Store current active
+    const slides = e.target
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
+    const dots = document.querySelector("[data-dots]");
+    const activeSlide = slides.querySelector("[data-active]");
+    const activeDot = dots.querySelector("[data-active]");
+    //Find index of clicked dot
+    let indexOfClicked = Number(e.target.id);
+    console.log(dots.children[indexOfClicked].dataset.active);
+    if (dots.children[indexOfClicked].dataset.active) {
+      console.log('You clicked the active dot');
+      return;
+    }
+    //Set clicked dot as active
+    slides.children[indexOfClicked].dataset.active = true;
+    dots.children[indexOfClicked].dataset.active = true;
+    //Delete Previous Active
+    delete activeSlide.dataset.active;
+    delete activeDot.dataset.active;
+  }
 
     return (
-      <div className="project-area" id='projects'>
+      <div className="project-area" id="projects">
         <h1>My Work</h1>
         <p>
           Title is a link to a live deployment, github image links to code. All
           links open in a new tab.
         </p>
         <div className="card-container" data-carousel>
-          <button className="carouselBtn prev" data-carousel-button='prev' onClick={changeSlide}>
+          <button
+            className="carouselBtn prev"
+            data-carousel-button="prev"
+            onClick={changeSlide}
+          >
             &#8656;
           </button>
-          <button className="carouselBtn next" data-carousel-button='next' onClick={changeSlide}>
+          <button
+            className="carouselBtn next"
+            data-carousel-button="next"
+            onClick={changeSlide}
+          >
             &#8658;
           </button>
           <ul data-slides>
@@ -202,6 +242,13 @@ function Projects(){
               <p>Pretend to go shopping for made up items.</p>
             </li>
           </ul>
+          <div className="dotsContainer" data-dots>
+            <div className="dot" onClick={goToIndex} id="0" data-active></div>
+            <div className="dot" onClick={goToIndex} id="1"></div>
+            <div className="dot" onClick={goToIndex} id="2"></div>
+            <div className="dot" onClick={goToIndex} id="3"></div>
+            <div className="dot" onClick={goToIndex} id="4"></div>
+          </div>
         </div>
       </div>
     );
