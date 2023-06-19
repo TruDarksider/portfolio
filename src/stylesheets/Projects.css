@@ -81,7 +81,6 @@ a>h2:hover {
 .dot {
     width: 1rem;
     height: 1rem;
-    color: var(--blue);
     background-color: var(--blue);
     border-radius: 3rem;
 
@@ -89,6 +88,7 @@ a>h2:hover {
 
 .dot[data-active] {
     border: 2px var(--green) solid;
+    background-color: var(--red);
 }
 
 .dotsContainer {
@@ -99,6 +99,13 @@ a>h2:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.externalLink {
+    width: 1.5rem;
+    /*For Orange->*/
+    /* filter: invert(33%) sepia(88%) saturate(1014%) hue-rotate(350deg) brightness(99%) contrast(97%); */
+    /*For Red-> filter: invert(12%) sepia(84%) saturate(3966%) hue-rotate(321deg) brightness(94%) contrast(96%); */
 }
 
 h2{
@@ -131,6 +138,8 @@ p{
 }
 
 .project-card {
+    padding-top: 3vh;
+    padding-left: 1vw;
     display: grid;
     grid-template-areas: 
     "img img h2" 
@@ -138,11 +147,12 @@ p{
     "img img p" ;
     position: absolute;
     place-items: center;
-    background-color: var(--red);
+    /* background-color: var(--red); */
     inset: 0;
     opacity: 0;
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 .project-card[data-active]{
@@ -196,11 +206,12 @@ ul {
             flex-direction: column;
             align-items: center;
             position: absolute;
-            background-color: var(--red);
+            /* background-color: var(--red) */;
             inset: 0;
             opacity: 0;
             transition: 200ms opacity ease-in-out;
             transition-delay: 200ms;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     }
 
     .screenshot {

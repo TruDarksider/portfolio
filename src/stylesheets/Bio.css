@@ -7,10 +7,22 @@
 }
 
 .bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--blue);
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
     height: 100vh;
+    color: var(--white);
+    padding-left: 15vw;
+    padding-right: 15vw;
+
 }
+
+.bio>h2 {
+    text-shadow: 2px 2px var(--red);
+}
+
 
 .external-bio-links{
     display: flex;
@@ -22,7 +34,15 @@
 
 .externalLink {
     width: 1.5rem;
+    /*For Orange->*/ /* filter: brightness(0) saturate(100%) invert(33%) sepia(88%) saturate(1014%) hue-rotate(350deg) brightness(99%) contrast(97%); */
+    /* For Red->  *//* filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(3966%) hue-rotate(321deg) brightness(94%) contrast(96%); */
+    /*For White->*/ filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(595%) hue-rotate(254deg) brightness(105%) contrast(90%);
 }
+
+.externalLink:hover{
+    filter: brightness(0) saturate(100%) invert(33%) sepia(88%) saturate(1014%) hue-rotate(350deg) brightness(99%) contrast(97%);
+}
+
 
 li {
     list-style: none;
@@ -37,6 +57,13 @@ li {
     .bio {
             background-color: var(--blue);
             padding-top: 10vh;
-            height: 30vh;
+            height: 50vh;
         }
+    .external-bio-links{
+        justify-content: center;
+        padding: 0;
+    }
+    ul {
+        padding-inline-start: 0;
+    }
 }

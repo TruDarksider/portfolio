@@ -47,9 +47,7 @@ function Projects(){
     const activeDot = dots.querySelector("[data-active]");
     //Find index of clicked dot
     let indexOfClicked = Number(e.target.id);
-    console.log(dots.children[indexOfClicked].dataset.active);
     if (dots.children[indexOfClicked].dataset.active) {
-      console.log('You clicked the active dot');
       return;
     }
     //Set clicked dot as active
@@ -73,14 +71,14 @@ function Projects(){
             data-carousel-button="prev"
             onClick={changeSlide}
           >
-            &#8656;
+            &#8668;
           </button>
           <button
             className="carouselBtn next"
             data-carousel-button="next"
             onClick={changeSlide}
           >
-            &#8658;
+            &#8669;
           </button>
           <ul data-slides>
             <li className="project-card" data-active>
