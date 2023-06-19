@@ -6,7 +6,40 @@ import photoScreenshot from '../images/PhotoAppScreenShot'
 import easScreenshot from '../images/EtchASketch.png'
 import github from '../github-original.svg'
 
-function Projects(){
+function Projects() {
+  let xStart = null;
+
+  const handleTouchStart = (e) => {
+    xStart = e.touches[0].clientX;
+  }
+
+  const swipeChangeSlide = (e) => {
+    let offset = 0;
+    let xEnd = e.changedTouches[0].clientX;
+    xEnd - xStart > 0 ? offset = -1 : offset = 1;
+    
+    //Below is from changeSlide
+    const slides = e.target
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
+    const dots = document.querySelector("[data-dots]");
+
+    const activeSlide = slides.querySelector("[data-active]");
+    const activeDot = dots.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+    if (newIndex < 0) {
+      newIndex = slides.children.length - 1;
+    }
+    if (newIndex >= slides.children.length) {
+      newIndex = 0;
+    }
+
+    slides.children[newIndex].dataset.active = true;
+    dots.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+    delete activeDot.dataset.active;
+  }
 
   const changeSlide = (e) => {
     //const buttons = document.querySelectorAll('[data-carousel-button]')
@@ -65,7 +98,7 @@ function Projects(){
           Title is a link to a live deployment, github image links to code. All
           links open in a new tab.
         </p>
-        <div className="card-container" data-carousel>
+        <div className="card-container" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
           <button
             className="carouselBtn prev"
             data-carousel-button="prev"
