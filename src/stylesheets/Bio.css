@@ -32,7 +32,7 @@
     padding-right: 3vw;
 }
 
-.externalLink {
+li>a>.externalLink {
     width: 1.5rem;
     /*For Orange->*/ /* filter: brightness(0) saturate(100%) invert(33%) sepia(88%) saturate(1014%) hue-rotate(350deg) brightness(99%) contrast(97%); */
     /* For Red->  *//* filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(3966%) hue-rotate(321deg) brightness(94%) contrast(96%); */
