@@ -81,6 +81,7 @@ a>h2:hover {
     right: -5rem;
 }
 
+
 .dot {
     width: 1rem;
     height: 1rem;
@@ -133,6 +134,11 @@ p{
     align-items: center;
 }
 
+.project-area>h1 {
+    color: var(--blue);
+    text-shadow: 2px 2px 2px var(--green);
+}
+
 .project-card {
     padding-top: 3vh;
     padding-left: 1vw;
@@ -142,7 +148,7 @@ p{
     "img img p" 
     "img img p" ;
     position: absolute;
-    place-items: center;
+    /* place-items: center; */
     inset: 0;
     opacity: 0;
     transition: 200ms opacity ease-in-out;
@@ -160,6 +166,7 @@ p{
     display:grid;
     grid-area: img;
     border-radius: 2%;
+    align-self: center;
 }
 
 ul {
@@ -170,6 +177,7 @@ ul {
 
 #ktScreenshot {
     width: 40%;
+    padding-left: 25%;
 }
 
 @media screen and (max-width: 800px) {
@@ -195,7 +203,10 @@ ul {
     .carouselBtn.next {
         right: 0;
     }
-    
+
+    #ktScreenshot{
+        padding-left: 0%;
+    }
     .project-card {
             display: flex;
             flex-direction: column;

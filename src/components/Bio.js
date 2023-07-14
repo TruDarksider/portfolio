@@ -19,8 +19,7 @@ function Bio(){
         <div className="bioText">
           <h2>About Me</h2>
           <p>
-            Loves playing games of all sorts, but mainly plays Destiny 2. Like,
-            too much probably. Earned a Bachelor's of Science in Applied Physics
+            Loves playing games of all sorts. Currently playing Destiny 2, Diablo 4, Overwatch, and halfway through a Dice Throne: Adventure campaign. Earned a Bachelor's of Science in Applied Physics
             (Acoustics Emphasis) from Brigham Young University. Spent 6 years as
             an Audio/Video technician but now seeks respite among the math and
             logics of a web/app developer career.{" "}

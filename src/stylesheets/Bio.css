@@ -54,7 +54,8 @@ li>a>.externalLink {
     width: 20vw;
     background-color: var(--green);
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 var(--orage), 0 6px 20px 0 var(--red)
+    box-shadow: 0 4px 8px 0 var(--orage);
+    /* box-shadow: 0 4px 8px 0 var(--orage), 0 6px 20px 0 var(--red); */
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     /* border: 1px solid var(--red); */
 }
@@ -76,11 +77,12 @@ li {
             justify-content: center;
             background-color: var(--blue);
             padding-top: 10vh;
-            height: 70vh;
+            height: 75vh;
         }
     .headshot{
         margin-top: 5vh;
         margin-right: 7vw;
+        width: 40vw;
     }
     .external-bio-links{
         justify-content: center;

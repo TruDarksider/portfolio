@@ -16,8 +16,10 @@ function Projects() {
   const swipeChangeSlide = (e) => {
     let offset = 0;
     let xEnd = e.changedTouches[0].clientX;
-    xEnd - xStart > 0 ? offset = -1 : offset = 1;
-    
+    if (xEnd - xStart < 20 && xEnd - xStart > -20) {
+      return;
+    }
+    xEnd - xStart > 0 ? (offset = -1) : (offset = 1);
     //Below is from changeSlide
     const slides = e.target
       .closest("[data-carousel]")
@@ -93,7 +95,7 @@ function Projects() {
 
     return (
       <div className="project-area" id="projects">
-        <h1>My Work</h1>
+        <h1>Projects</h1>
         <p>
           Title is a link to a live deployment, github image links to code. All
           links open in a new tab.
@@ -142,7 +144,7 @@ function Projects() {
               </div>
               <p>
                 Create an account and post a message to a public forum. Become a
-                Member using "plsLetMePost1Message". Reach out for admin
+                Member using "plsLetMePost1Message". Reach out for an Admin
                 password. Uses Express, passport, Node, MongoDB. Hosted using
                 Railway.
               </p>
@@ -159,7 +161,7 @@ function Projects() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <h2>Photo Tagging App</h2>
+                  <h2>Match the Color</h2>
                 </a>
                 <a
                   href="https://github.com/TruDarksider/photo-tagging-app"
@@ -176,7 +178,7 @@ function Projects() {
               <p>
                 Find the three randomly selected colors among the pixels. Uses
                 React as a framework with Firebase as a backend for creating and
-                holding the answerkey.
+                holding the answer key.
               </p>
             </li>
             <li className="project-card">
@@ -207,7 +209,7 @@ function Projects() {
               </div>
               <p>
                 Use your mouse to mimic a classic toy inside a browser window.
-                Has the ability to change canvas size as well as drawing color.
+                Has the ability to change canvas size as well as drawing color. Showcases DOM manipulation with user selections. 
               </p>
             </li>
             <li className="project-card">
@@ -239,9 +241,9 @@ function Projects() {
               </div>
               <p>
                 Finds the shortest route for a knight to reach a particular spot
-                on a chessboard. Uses a graph data structure to plot the course.
-                Board origin is [0,0] in the top left and goes to [7,7] located
-                in the bottom right.
+                on a chessboard using a graph data structure.
+                Board origin is [0,0] in the top left and with [7,7]
+                in the bottom right. Refresh the page for a new start and end point.
               </p>
             </li>
             <li className="project-card">
@@ -270,7 +272,7 @@ function Projects() {
                   />
                 </a>
               </div>
-              <p>Pretend to go shopping for made up items.</p>
+              <p>Pretend to go shopping for made up items. A React app showcasing variable passing between components.</p>
             </li>
           </ul>
           <div className="dotsContainer" data-dots>

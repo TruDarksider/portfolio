@@ -12,11 +12,12 @@ function Footer(){
         <br />
         <span>Ashland, OR</span>
         <br />
-        <span id="bottom">
-          But willing to relocate within the Pacific Northwest.
+        <span>
+          Willing to relocate within the Pacific Northwest.
         </span>
-            <br />
-        <span id="bottom"></span>
+        <br />
+        <br />
+        <span id="bottom">Warlock class icon from Destiny 2, a game made by BUNGiE. Github and LinkedIn icons from their samely titled companies.</span>
       </div>
     );
 }
