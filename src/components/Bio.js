@@ -17,13 +17,16 @@ function Bio(){
           className="headshot"
         />
         <div className="bioText">
-          <h2>About Me</h2>
+          <h2>Hey! I'm Tyler.</h2>
           <p>
-            Loves playing games of all sorts. Currently playing Destiny 2, Diablo 4, Overwatch, and halfway through a Dice Throne: Adventure campaign. Earned a Bachelor's of Science in Applied Physics
-            (Acoustics Emphasis) from Brigham Young University. Spent 6 years as
-            an Audio/Video technician but now seeks respite among the math and
-            logics of a web/app developer career.{" "}
+            I'm a software engineer specializing in web and app development. As a former audio engineer, I discovered a love for energizing an audience; a year with The Odin Project later, and I now create fun digital experiences that bring even more people joy.
+          
           </p>
+          <p>
+            I enjoy learning new things and challenging myself. While I'm currently working with Javascript and React, I've previously played around in C++, Unreal Engine, and Wwise.
+
+          </p>
+          
           <ul className="external-bio-links">
             <li>
               <a href="https://github.com/TruDarksider">

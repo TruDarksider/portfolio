@@ -27,6 +27,8 @@
 
 @media screen and (max-width:800px) {
 .footer {
-        padding-left: 0;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        width: 90vw;
     }
 }
