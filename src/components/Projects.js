@@ -44,11 +44,7 @@ function Projects() {
   }
 
   const changeSlide = (e) => {
-    //const buttons = document.querySelectorAll('[data-carousel-button]')
-    
-    //buttons.forEach(button => {
-      const offset = e.target.classList.contains("next") ? 1 : -1;
-      //const slides = button.closest("[data-carousel]").querySelector("[data-slides]");
+    const offset = e.target.classList.contains("next") ? 1 : -1;
     const slides = e.target
       .closest("[data-carousel]")
       .querySelector("[data-slides]");
@@ -69,7 +65,6 @@ function Projects() {
       dots.children[newIndex].dataset.active = true;
       delete activeSlide.dataset.active;
       delete activeDot.dataset.active;
-  //})
   }
   
   const goToIndex = (e) => {
@@ -238,13 +233,15 @@ function Projects() {
                     className="externalLink"
                   />
                 </a>
+                {/* <h3 className='newlyUpdated'>Being Updated!</h3> */}
               </div>
               <p>
                 Finds the shortest route for a knight to reach a particular spot
                 on a chessboard using a graph data structure.
                 Board origin is [0,0] in the top left and with [7,7]
-                in the bottom right. Refresh the page for a new start and end point.
+                in the bottom right. Now with TypeScript! User input currently in development.
               </p>
+              <h3 className='newlyUpdated'>Being Updated!</h3>
             </li>
             <li className="project-card">
               <img
