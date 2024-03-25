@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5cec00d0.css",
-    "main.js": "/static/js/main.d331a8aa.js",
+    "main.css": "/static/css/main.6f20e4ed.css",
+    "main.js": "/static/js/main.aa982e43.js",
     "static/media/editedHeadshot.png": "/static/media/editedHeadshot.ee099a0a141fac0c5fff.png",
     "static/media/D2Warlock.png": "/static/media/D2Warlock.cee3f5ec61bf81f704b0.png",
     "static/media/ShopScreenshot.png": "/static/media/ShopScreenshot.61836e9113b4876ce40c.png",
@@ -11,11 +11,11 @@
     "static/media/EtchASketch.png": "/static/media/EtchASketch.300cc639e98c63583b37.png",
     "static/media/github-original.svg": "/static/media/github-original.3c903c66b2c5334c8c0b80567c4ea422.svg",
     "index.html": "/index.html",
-    "main.5cec00d0.css.map": "/static/css/main.5cec00d0.css.map",
-    "main.d331a8aa.js.map": "/static/js/main.d331a8aa.js.map"
+    "main.6f20e4ed.css.map": "/static/css/main.6f20e4ed.css.map",
+    "main.aa982e43.js.map": "/static/js/main.aa982e43.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cec00d0.css",
-    "static/js/main.d331a8aa.js"
+    "static/css/main.6f20e4ed.css",
+    "static/js/main.aa982e43.js"
   ]
 }
