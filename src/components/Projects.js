@@ -114,7 +114,7 @@ function Projects() {
             <li className="project-card" data-active>
               <img
                 className="screenshot"
-                alt="Screenshot of the Message Board project"
+                alt="Preview of the Message Board project"
                 src={mbScreenshot}
               />
               <div className="card-title">
@@ -147,7 +147,7 @@ function Projects() {
             <li className="project-card">
               <img
                 className="screenshot"
-                alt="Screenshot of Photo Tagging App project"
+                alt="Preview of the Photo Tagging App project"
                 src={photoScreenshot}
               />
               <div className="card-title">
@@ -178,7 +178,7 @@ function Projects() {
             </li>
             <li className="project-card">
               <img
-                alt="Screenshot of Etch-A-Sketch project"
+                alt="Preview of the Etch-A-Sketch project"
                 src={easScreenshot}
                 className="screenshot"
               />
@@ -211,7 +211,7 @@ function Projects() {
               <img
                 className="screenshot"
                 id="ktScreenshot"
-                alt="Screenshot of Knight Travails project"
+                alt="Preview of the Knight Travails project"
                 src={ktScreenshot}
               />
               <div className="card-title">
