@@ -123,16 +123,17 @@ img{
 }
 
 .newlyUpdated{
-    position: relative;
+    position: absolute;
     text-shadow: none;
-    top: -45vh;
-    left: -5vw;
-    margin: .5em auto; 
+    top: 0;
+    left: 0;
+    margin: 0; 
     padding: .5em; 
     border-radius: .25em;
     transform: rotate(-20deg) rotateY(20deg);
     background: var(--red);
     text-align: center;
+    width: 25vw;
 }
 .newlyUpdated:after{
     position: absolute;
@@ -144,14 +145,45 @@ img{
     background: var(--orage);
 }
 
+.updating{
+    position: relative;
+}
+
+.updating>div>p{
+    position: relative;
+    left: -10%;
+}
+
+.updating>div>div{
+    position: relative;
+    left: -10%;
+}
+
+.noncarousel{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.off{
+    background-color: #AA1155;
+}
+
+.on{
+    background-color: #94C9A9;
+}
+
 p{
     grid-area: p;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .project-area{
-    height: 100vh;
+    /* height: 100vh; */
     flex: 1 0 auto;
     padding-top: 10vh;
+    padding-bottom: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,11 +217,44 @@ p{
     transition-delay: 0ms;
 }
 
+.updating-card{
+    padding-top: 3vh;
+    padding-left: 1vw;
+    display: grid;
+    grid-template-areas: 
+    "img img h2" 
+    "img img p" 
+    "img img p" ;
+    position: absolute;
+}
+
+.project-card-list{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-bottom: 3vh;
+    display: grid;
+    grid-template-areas: 
+    "img img h2" 
+    "img img p" 
+    "img img p" ;
+    position: relative;
+    inset: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
 .screenshot{
     display:grid;
     grid-area: img;
     border-radius: 2%;
     align-self: center;
+}
+
+.toggle{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5vw;
 }
 
 ul {
@@ -199,7 +264,7 @@ ul {
 }
 
 #ktScreenshot {
-    width: 40%;
+    width: 60%;
     padding-left: 25%;
 }
 
