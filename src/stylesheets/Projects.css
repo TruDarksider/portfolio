@@ -228,6 +228,56 @@ p{
     position: absolute;
 }
 
+.pills-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.pill{
+    font-size: large;
+    border-radius: 3vw;
+    padding: .3rem
+}
+
+#Express{
+    background-color: blue;
+}
+
+#Firebase{
+    background-color: orange;
+}
+
+#JavaScript{
+    background-color: olivedrab;
+}
+
+#MongoDB{
+    background-color: #94C9A9;
+}
+
+#Node{
+    background-color: #2C666E;
+}
+
+
+#passport{
+    background-color: #AA1155;
+}
+
+#Railway{
+    background-color: #D45113;
+}
+
+#React{
+    background-color: aqua;
+}
+
+#TypeScript{
+    background-color: lightskyblue;
+}
+
 .project-card-list{
     margin-left: 5vw;
     margin-right: 5vw;
@@ -238,7 +288,7 @@ p{
     grid-template-areas: 
     "img img h2" 
     "img img p" 
-    "img img p" ;
+    "img img div" ;
     position: relative;
     inset: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
