@@ -1,7 +1,7 @@
 import mbScreenshot from '../images/MessageBoard.png'
 import ktScreenshot from '../images/KnightTravails.png'
 import shopScreenshot from '../images/ShopScreenshot.png'
-import photoScreenshot from '../images/PhotoAppScreenShot'
+import photoScreenshot from '../images/PhotoAppScreenShot.png'
 import easScreenshot from '../images/EtchASketch.png'
 import github from '../github-original.svg'
 
@@ -46,7 +46,7 @@ function Cards() {
             <li className="project-card-list">
               <img
                 className="screenshot"
-                alt="Preview of the Photo Tagging App project"
+                alt="Preview of the Match the Color project"
                 src={photoScreenshot}
               />
               <div className="card-title">
@@ -146,7 +146,7 @@ function Cards() {
             <li className="project-card-list">
               <img
                 className="screenshot"
-                alt="Screenshot of Shop project"
+                alt="Preview of the Shop project"
                 src={shopScreenshot}
               />
               <div className="card-title">

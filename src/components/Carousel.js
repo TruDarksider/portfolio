@@ -1,7 +1,7 @@
 import mbScreenshot from '../images/MessageBoard.png'
 import ktScreenshot from '../images/KnightTravails.png'
 import shopScreenshot from '../images/ShopScreenshot.png'
-import photoScreenshot from '../images/PhotoAppScreenShot'
+import photoScreenshot from '../images/PhotoAppScreenShot.png'
 import easScreenshot from '../images/EtchASketch.png'
 import github from '../github-original.svg'
 
