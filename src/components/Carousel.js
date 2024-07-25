@@ -1,12 +1,20 @@
+import React, {useState, useEffect} from 'react'
 import mbScreenshot from '../images/MessageBoard.png'
 import ktScreenshot from '../images/KnightTravails.png'
 import shopScreenshot from '../images/ShopScreenshot.png'
 import photoScreenshot from '../images/PhotoAppScreenShot.png'
 import easScreenshot from '../images/EtchASketch.png'
 import github from '../github-original.svg'
+import projects from '../data.json'
 
 function Carousel(){
+    function getImgUrl(img){
+        let image = require('../images/'+img)
+        return image
+    }
     let xStart = null;
+    const [slideIndex, setSlideIndex] = useState(0);
+    const [project, setProject] = useState(projects[slideIndex])
 
     const handleTouchStart = (e) => {
       xStart = e.touches[0].clientX;
@@ -20,59 +28,51 @@ function Carousel(){
       }
       xEnd - xStart > 0 ? (offset = -1) : (offset = 1);
       //Below is from changeSlide
-      const slides = e.target
-        .closest("[data-carousel]")
-        .querySelector("[data-slides]");
-      const dots = document.querySelector("[data-dots]");
-  
-      const activeSlide = slides.querySelector("[data-active]");
-      const activeDot = dots.querySelector("[data-active]");
-      let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-  
-      if (newIndex < 0) {
-        newIndex = slides.children.length - 1;
-      }
-      if (newIndex >= slides.children.length) {
-        newIndex = 0;
-      }
-  
-      slides.children[newIndex].dataset.active = true;
-      dots.children[newIndex].dataset.active = true;
-      delete activeSlide.dataset.active;
-      delete activeDot.dataset.active;
-    }
-  
-    const changeSlide = (e) => {
-      const offset = e.target.classList.contains("next") ? 1 : -1;
-      const slides = e.target
-        .closest("[data-carousel]")
-        .querySelector("[data-slides]");
+      let tempIndex = slideIndex + offset;
+
       const dots = document.querySelector('[data-dots]');
-  
-        const activeSlide = slides.querySelector("[data-active]");
-        const activeDot = dots.querySelector('[data-active]')
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-        
-        if (newIndex < 0) {
-          newIndex = slides.children.length - 1;
-        }
-        if (newIndex >= slides.children.length) {
-          newIndex = 0;
-        }
-  
-        slides.children[newIndex].dataset.active = true;
-        dots.children[newIndex].dataset.active = true;
-        delete activeSlide.dataset.active;
-        delete activeDot.dataset.active;
+      const activeDot = dots.querySelector('[data-active]')
+      
+      handleChange(tempIndex);
+      
+      dots.children[slideIndex].dataset.active = true;
+      if(activeDot != dots.children[slideIndex]){
+        delete activeDot.dataset.active; }
     }
+
+    const changeSlide = (e) => {
+        const offset = e.target.classList.contains("next") ? 1 : -1;
+        let tempIndex = slideIndex + offset;
+
+          const dots = document.querySelector('[data-dots]');
+          const activeDot = dots.querySelector('[data-active]');
+          
+          handleChange(tempIndex);
+          
+          dots.children[slideIndex].dataset.active = true;
+          if(activeDot != dots.children[slideIndex]){
+            delete activeDot.dataset.active; }
+      }
+
+      const handleChange = (newIndex) =>{
+        if (newIndex < 0) {
+            setSlideIndex(projects.length - 1);
+        }else if (newIndex >= projects.length) {
+            setSlideIndex(0);
+        } else {
+            setSlideIndex(newIndex);
+        }
+        setProject(projects[slideIndex])
+        const dots = document.querySelector('[data-dots]');
+        const activeDot = dots.querySelector('[data-active]');
+        dots.children[slideIndex].dataset.active = true;
+          if(activeDot != dots.children[slideIndex]){
+            delete activeDot.dataset.active; }
+      }
     
     const goToIndex = (e) => {
       //Store current active
-      const slides = e.target
-        .closest("[data-carousel]")
-        .querySelector("[data-slides]");
       const dots = document.querySelector("[data-dots]");
-      const activeSlide = slides.querySelector("[data-active]");
       const activeDot = dots.querySelector("[data-active]");
       //Find index of clicked dot
       let indexOfClicked = Number(e.target.id);
@@ -80,12 +80,16 @@ function Carousel(){
         return;
       }
       //Set clicked dot as active
-      slides.children[indexOfClicked].dataset.active = true;
+      handleChange(indexOfClicked);
       dots.children[indexOfClicked].dataset.active = true;
       //Delete Previous Active
-      delete activeSlide.dataset.active;
       delete activeDot.dataset.active;
     }
+
+    useEffect(()=>{
+        handleChange(slideIndex)
+    },[slideIndex])
+
     return(
         <div className="card-container" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
           <button
@@ -103,166 +107,43 @@ function Carousel(){
             &#8669;
           </button>
           <ul data-slides>
-            <li className="project-card" data-active>
-              <img
-                className="screenshot"
-                alt="Preview of the Message Board project"
-                src={mbScreenshot}
-              />
-              <div className="card-title">
-                <a
-                  href="https://messageboard-production-cd70.up.railway.app"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Message Board</h2>
-                </a>
-                <a
-                  href="https://github.com/TruDarksider/messageboard"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    alt="GitHub logo linking to Message Board repository"
-                    src={github}
-                    className="externalLink"
-                  />
-                </a>
-              </div>
-              <p>
-                Create an account and post a message to a public forum. Become a
-                Member using "plsLetMePost1Message". Reach out for an Admin
-                password. Uses Express, passport, Node, MongoDB. Hosted using
-                Railway.
-              </p>
-            </li>
-            <li className="project-card">
-              <img
-                className="screenshot"
-                alt="Preview of the Photo Tagging App project"
-                src={photoScreenshot}
-              />
-              <div className="card-title">
-                <a
-                  href="https://trudarksider.github.io/photo-tagging-app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Match the Color</h2>
-                </a>
-                <a
-                  href="https://github.com/TruDarksider/photo-tagging-app"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    alt="GitHub logo linking to Photo Tagging App repository"
-                    src={github}
-                    className="externalLink"
-                  />
-                </a>
-              </div>
-              <p>
-                Find the three randomly selected colors among the pixels. Uses
-                React as a framework with Firebase as a backend for creating and
-                holding the answer key.
-              </p>
-            </li>
-            <li className="project-card">
-              <img
-                alt="Preview of the Etch-A-Sketch project"
-                src={easScreenshot}
-                className="screenshot"
-              />
-              <div className="card-title">
-                <a
-                  href="https://trudarksider.github.io/etch-a-sketch/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Etch-A-Sketch</h2>
-                </a>
-                <a
-                  href="https://github.com/TruDarksider/etch-a-sketch"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    alt="GitHub logo linking to Etch-a-Sketch repository"
-                    src={github}
-                    className="externalLink"
-                  />
-                </a>
-              </div>
-              <p>
-                Use your mouse to mimic a classic toy inside a browser window.
-                Has the ability to change canvas size as well as drawing color. Showcases DOM manipulation with user selections. 
-              </p>
-            </li>
-            <li className="project-card updating">
-                <div className='updating-card'>
-              <img
-                className="screenshot"
-                id="ktScreenshot"
-                alt="Preview of the Knight Travails project"
-                src={ktScreenshot}
-              />
-              <div className="card-title">
-                <a
-                  href="https://trudarksider.github.io/knight-travails/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Knight Travails</h2>
-                </a>
-                <a
-                  href="https://github.com/TruDarksider/knight-travails"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    alt="GitHub logo linking to Knight Travails repository"
-                    src={github}
-                    className="externalLink"
-                  />
-                </a>
-              </div>
-              <p>
-                Finds the shortest route for a knight to reach a particular spot
-                on a chessboard using a graph data structure.
-                Board origin is [0,0] in the top left and with [7,7]
-                in the bottom right. Now with TypeScript! User input currently in development.
-              </p>
-              </div>
-              <h3 className='newlyUpdated'>Being Updated!</h3>
-            </li>
-            <li className="project-card">
-              <img
-                className="screenshot"
-                alt="Screenshot of Shop project"
-                src={shopScreenshot}
-              />
-              <div className="card-title">
-                <a
-                  href="https://trudarksider.github.io/shopping-cart/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Shop</h2>
-                </a>
-                <a
-                  href="https://github.com/TruDarksider/shopping-cart"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    alt="GitHub logo linking to Shop repository"
-                    src={github}
-                    className="externalLink"
-                  />
-                </a>
-              </div>
-              <p>Pretend to go shopping for made up items. A React app showcasing variable passing between components.</p>
+            <li key={project.id} className='project-card-list' data-active={project.dataActive}>
+                <img
+                    className="screenshot"
+                    alt={project.imageDesc}
+                    src={getImgUrl(project.image)}
+                />
+                <div className="card-title">
+                    <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <h2>{project.title}</h2>
+                    </a>
+                    <a
+                        href={project.githubRepo}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            alt={project.githubRepoDesc}
+                            src={github}
+                            className="externalLink"
+                        />
+                    </a>
+                </div>
+                <p>
+                  {project.description}
+                </p>
+                <div className='pills-container'>
+                    {project.pills.map((pill)=>(
+                        <div key={pill} id={pill.toString()} className='pill'>
+                            {pill}
+                        </div>
+                    ))
+                    }
+                </div>
             </li>
           </ul>
           <div className="dotsContainer" data-dots>
@@ -277,3 +158,4 @@ function Carousel(){
 }
 
 export default Carousel;
+
