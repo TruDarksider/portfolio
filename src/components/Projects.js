@@ -2,6 +2,7 @@ import '../stylesheets/Projects.css'
 import React, { useState } from 'react'
 import Carousel from './Carousel'
 import Cards from './Cards';
+import DynamicCards from './DynamicCards';
 
 function Projects() {
   const [isToggled, setToggle] = useState(false);
@@ -31,7 +32,7 @@ function Projects() {
             {isToggled ? 'ON' : 'OFF'}
           </button>
         </div>
-        {isToggled ? <Carousel/> : <Cards/>}
+        {isToggled ? <Carousel/> : <DynamicCards/>}
       </div>
     );
 }
