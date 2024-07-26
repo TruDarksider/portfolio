@@ -14,12 +14,12 @@ function Header() {
           <a className="link" href='#contact'>Contact</a>
         </div>
       </div> */
-      <div className="flex sticky bg-white place-content-evenly text-2xl z-10">
+      <div className="flex sticky bg-my-white place-content-evenly text-2xl z-10">
         <div className="flex items-center border-solid">
           <img className="h-12 w-auto" alt="Warlock symbol from Destiny 2 which Tyler frequently plays" src={warlock} />
           <div className="hidden sm:block">Tyler Hopkin</div>
         </div>
-        <div className="grid grid-flow-col place-content-evenly items-center gap-6">
+        <div className="text-my-blue grid grid-flow-col place-content-evenly items-center gap-6">
           <a href='#about'>About Me</a>
           <a href='#projects'>Projects</a>
           <a href='#contact'>Contact</a>
