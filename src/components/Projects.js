@@ -1,7 +1,6 @@
 import '../stylesheets/Projects.css'
 import React, { useState } from 'react'
 import Carousel from './Carousel'
-import Cards from './Cards';
 import DynamicCards from './DynamicCards';
 
 function Projects() {

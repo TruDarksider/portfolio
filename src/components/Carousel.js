@@ -1,9 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import mbScreenshot from '../images/MessageBoard.png'
-import ktScreenshot from '../images/KnightTravails.png'
-import shopScreenshot from '../images/ShopScreenshot.png'
-import photoScreenshot from '../images/PhotoAppScreenShot.png'
-import easScreenshot from '../images/EtchASketch.png'
 import github from '../github-original.svg'
 import projects from '../data.json'
 
@@ -36,7 +31,7 @@ function Carousel(){
       handleChange(tempIndex);
       
       dots.children[slideIndex].dataset.active = true;
-      if(activeDot != dots.children[slideIndex]){
+      if(activeDot !== dots.children[slideIndex]){
         delete activeDot.dataset.active; }
     }
 
@@ -50,7 +45,7 @@ function Carousel(){
           handleChange(tempIndex);
           
           dots.children[slideIndex].dataset.active = true;
-          if(activeDot != dots.children[slideIndex]){
+          if(activeDot !== dots.children[slideIndex]){
             delete activeDot.dataset.active; }
       }
 
@@ -66,7 +61,7 @@ function Carousel(){
         const dots = document.querySelector('[data-dots]');
         const activeDot = dots.querySelector('[data-active]');
         dots.children[slideIndex].dataset.active = true;
-          if(activeDot != dots.children[slideIndex]){
+          if(activeDot !== dots.children[slideIndex]){
             delete activeDot.dataset.active; }
       }
     

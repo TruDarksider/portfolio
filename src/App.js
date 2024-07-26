@@ -7,13 +7,11 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <div className="App">
-      {/* <header className="App-header"> */}
+    <div className="flex-col"> {/* classname="App" */}
       <Header />  
       <Bio />
-        <Projects />
-        <Footer />
-      {/* </header> */}
+      <Projects />
+      <Footer />
     </div>
   );
 }
