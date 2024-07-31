@@ -36,17 +36,10 @@ function Carousel(){
     }
 
     const changeSlide = (e) => {
-        const offset = e.target.classList.contains("next") ? 1 : -1;
+        const offset = e.target.getAttribute('data-carousel-button')=="next" ? 1 : -1;
         let tempIndex = slideIndex + offset;
-
-          const dots = document.querySelector('[data-dots]');
-          const activeDot = dots.querySelector('[data-active]');
           
-          handleChange(tempIndex);
-          
-          dots.children[slideIndex].dataset.active = true;
-          if(activeDot !== dots.children[slideIndex]){
-            delete activeDot.dataset.active; }
+        handleChange(tempIndex);
       }
 
       const handleChange = (newIndex) =>{
@@ -61,24 +54,30 @@ function Carousel(){
         const dots = document.querySelector('[data-dots]');
         const activeDot = dots.querySelector('[data-active]');
         dots.children[slideIndex].dataset.active = true;
+        dots.children[slideIndex].classList.add('bg-my-red');
+        dots.children[slideIndex].classList.add('border-my-green');
+        dots.children[slideIndex].classList.add('border-solid');
+        dots.children[slideIndex].classList.add('border-2');
+        //Delete styles and attributes related to being active for previously active index
           if(activeDot !== dots.children[slideIndex]){
+            activeDot.classList.remove('border-my-green');
+            activeDot.classList.remove('bg-my-red');
+            activeDot.classList.remove('border-solid');
+            activeDot.classList.remove('border-2');
+            activeDot.classList.add('bg-my-blue')
             delete activeDot.dataset.active; }
       }
     
     const goToIndex = (e) => {
       //Store current active
       const dots = document.querySelector("[data-dots]");
-      const activeDot = dots.querySelector("[data-active]");
-      //Find index of clicked dot
+      //Find index of clicked dot and check it's not already active
       let indexOfClicked = Number(e.target.id);
       if (dots.children[indexOfClicked].dataset.active) {
         return;
       }
-      //Set clicked dot as active
+      //Use function to update to the new index and handle
       handleChange(indexOfClicked);
-      dots.children[indexOfClicked].dataset.active = true;
-      //Delete Previous Active
-      delete activeDot.dataset.active;
     }
 
     useEffect(()=>{
@@ -86,7 +85,7 @@ function Carousel(){
     },[slideIndex])
 
     return(
-        <div className="card-container" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
+        /*<div className="card-container" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
           <button
             className="carouselBtn prev"
             data-carousel-button="prev"
@@ -147,6 +146,71 @@ function Carousel(){
             <div className="dot" onClick={goToIndex} id="2"></div>
             <div className="dot" onClick={goToIndex} id="3"></div>
             <div className="dot" onClick={goToIndex} id="4"></div>
+          </div>
+        </div>*/
+        <div className="" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
+          <button
+            className="absolute left-12 text-6xl h-64 border-solid border-2 border-my-blue bg-my-green"
+            data-carousel-button="prev"
+            onClick={changeSlide}
+          >
+            &#60;
+          </button>
+          <button
+            className="absolute right-12 text-6xl h-64 border-solid border-2 border-my-blue bg-my-green"
+            data-carousel-button="next"
+            onClick={changeSlide}
+          >
+            &#62;
+          </button>
+          <ul className="flex flex-col gap-4 items-center" data-slides>
+            <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2' data-active={project.dataActive}>
+                <img
+                    className="max-h-64 w-auto"
+                    alt={project.imageDesc}
+                    src={getImgUrl(project.image)}
+                />
+                <div>
+                <div className="flex flex-col items-center justify-center pb-6">
+                    <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <h2 className='text-xl'>{project.title}</h2>
+                    </a>
+                    <a
+                        href={project.githubRepo}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            alt={project.githubRepoDesc}
+                            src={github}
+                            className="h-5 w-auto"
+                        />
+                    </a>
+                </div>
+                <p>
+                  {project.description}
+                </p>
+                <div className='flex gap-2 text-sm items-center justify-center'>
+                    {project.pills.map((pill)=>(
+                        <div key={pill} id={pill.toString()} className='rounded-2xl p-1'>
+                            {pill}
+                        </div>
+                    ))
+                    }
+                </div>
+                </div>
+            </li>
+          </ul>
+          <div className="flex place-content-evenly pt-2" data-dots>
+            <div className="h-4 w-4 bg-my-red rounded-lg border-my-green border-2" onClick={goToIndex} id='0'  data-active></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='1'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='2'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='3'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='4'></div>
           </div>
         </div>
     )

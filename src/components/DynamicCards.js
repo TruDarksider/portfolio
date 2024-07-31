@@ -7,7 +7,7 @@ function DynamicCards() {
         return image
     }
     return(
-        <div>
+        /*<div>
             <ul className="noncarousel">
                 {projects.map((project)=>(
                     <li key={project.id} className='project-card-list'>
@@ -46,6 +46,52 @@ function DynamicCards() {
                                 </div>
                             ))
                             }
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>*/
+        <div>
+            <ul className="flex flex-col gap-4 items-center">
+                {projects.map((project)=>(
+                    <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2'>
+                        <img
+                            className="max-h-64 w-auto"
+                            alt={project.imageDesc}
+                            src={getImgUrl(project.image)}
+                        />
+                        <div>
+                        <div className="flex flex-col items-center justify-center pb-6">
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <h2 className='text-xl'>{project.title}</h2>
+                            </a>
+                            <a
+                                href={project.githubRepo}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    alt={project.githubRepoDesc}
+                                    src={github}
+                                    className="h-5 w-auto"
+                                />
+                            </a>
+                        </div>
+                        <p className=''>
+                          {project.description}
+                        </p>
+                        <div className='flex gap-2 text-sm items-center justify-center'>
+                            {project.pills.map((pill)=>(
+                                <div key={pill} id={pill.toString()} className='rounded-2xl p-1'>
+                                    {pill}
+                                </div>
+                            ))
+                            }
+                        </div>
                         </div>
                     </li>
                 ))}

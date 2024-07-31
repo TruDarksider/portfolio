@@ -54,11 +54,11 @@ function Bio(){
           </ul>
         </div>
       </div>*/
-      <div className="pt-16 flex items-center bg-my-blue text-xl sm:flex-col gap-2">
+      <div className="pt-16 flex flex-col items-center bg-my-blue text-xl sm:flex-row gap-2 pb-4 px-64">
         <img
           alt="Headshot of Tyler Hopkin"
           src={headshot}
-          className="bg-my-green rounded-2xl shadow-md shadow-my-orange"
+          className="bg-my-green rounded-2xl shadow-md shadow-my-orange max-h-96 w-auto"
         />
         <div className="text-center text-my-white px-6">
           <h2 className='text-2xl drop-shadow-md py-4'>Hey! I'm Tyler.</h2>
