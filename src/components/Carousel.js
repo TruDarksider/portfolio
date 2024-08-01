@@ -55,15 +55,9 @@ function Carousel(){
         const activeDot = dots.querySelector('[data-active]');
         dots.children[slideIndex].dataset.active = true;
         dots.children[slideIndex].classList.add('bg-my-red');
-        dots.children[slideIndex].classList.add('border-my-green');
-        dots.children[slideIndex].classList.add('border-solid');
-        dots.children[slideIndex].classList.add('border-2');
         //Delete styles and attributes related to being active for previously active index
           if(activeDot !== dots.children[slideIndex]){
-            activeDot.classList.remove('border-my-green');
             activeDot.classList.remove('bg-my-red');
-            activeDot.classList.remove('border-solid');
-            activeDot.classList.remove('border-2');
             activeDot.classList.add('bg-my-blue')
             delete activeDot.dataset.active; }
       }
@@ -166,7 +160,7 @@ function Carousel(){
             </button>
           </div>
           <ul className="flex flex-col gap-4 items-center" data-slides>
-            <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2' data-active={project.dataActive}>
+            <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2 bg-my-white' data-active={project.dataActive}>
                 <img
                     className="max-h-64 w-auto"
                     alt={project.imageDesc}
@@ -213,10 +207,10 @@ function Carousel(){
           </ul>
           <div className="flex place-content-evenly pt-2" data-dots>
             <div className="h-4 w-4 bg-my-red rounded-lg border-my-green border-2" onClick={goToIndex} id='0'  data-active></div>
-            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='1'></div>
-            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='2'></div>
-            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='3'></div>
-            <div className="h-4 w-4 bg-my-blue rounded-lg" onClick={goToIndex} id='4'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg border-my-green border-2" onClick={goToIndex} id='1'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg border-my-green border-2" onClick={goToIndex} id='2'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg border-my-green border-2" onClick={goToIndex} id='3'></div>
+            <div className="h-4 w-4 bg-my-blue rounded-lg border-my-green border-2" onClick={goToIndex} id='4'></div>
           </div>
         </div>
     )

@@ -54,7 +54,7 @@ function DynamicCards() {
         <div>
             <ul className="flex flex-col gap-4 items-center">
                 {projects.map((project)=>(
-                    <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2'>
+                    <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2 bg-my-white'>
                         <img
                             className="max-h-64 w-auto"
                             alt={project.imageDesc}
