@@ -242,40 +242,45 @@ p{
 }
 
 #Express{
-    background-color: blue;
+    background-color: black;
+    color: white
 }
 
 #Firebase{
-    background-color: orange;
+    background-color: #dd2c00;
+}
+
+#Graphs{
+    background-color: #8d8d8d;
 }
 
 #JavaScript{
-    background-color: olivedrab;
+    background-color: #ed3a4e;
 }
 
 #MongoDB{
-    background-color: #94C9A9;
+    background-color: #00ed64;
 }
 
 #Node{
-    background-color: #2C666E;
+    background-color: #57a745;
 }
 
-
 #passport{
-    background-color: #AA1155;
+    background-color: #35df79;
 }
 
 #Railway{
-    background-color: #D45113;
+    background-color: #843acd;
 }
 
 #React{
-    background-color: aqua;
+    background-color: #58c4dc;
 }
 
 #TypeScript{
-    background-color: lightskyblue;
+    background-color: #3178c6;
+    color: white;
 }
 
 .project-card-list{
