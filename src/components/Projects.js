@@ -39,7 +39,7 @@ function Projects() {
           Title is a link to a live deployment, github image links to code. All
           links open in a new tab.
         </p>
-        <div className='text-right text-sm pr-60'>
+        <div className='text-right text-sm md:pr-60'>
           {'Carousel view '}
             {isToggled ? <button className='bg-my-green rounded-2xl p-1' onClick={handleToggle}>ON</button> 
               : <button className='bg-my-red rounded-2xl p-1' onClick={handleToggle}>OFF</button>}

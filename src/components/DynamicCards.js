@@ -62,26 +62,30 @@ function DynamicCards() {
                         />
                         <div>
                         <div className="flex flex-col items-center justify-center pb-6">
-                            <a
-                                href={project.url}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <h2 className='text-xl'>{project.title}</h2>
-                            </a>
-                            <a
-                                href={project.githubRepo}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <h2 className='text-xl text-my-blue'>{project.title}</h2>
+                            <div className='flex gap-1 items-center'>
+                                <a
+                                    href={project.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className='text-my-black'
+                                >
+                                live site | 
+                                </a>
+                                <a
+                                    href={project.githubRepo}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                 <img
                                     alt={project.githubRepoDesc}
                                     src={github}
                                     className="h-5 w-auto"
                                 />
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                        <p className=''>
+                        <p className='text-left'>
                           {project.description}
                         </p>
                         <div className='flex gap-2 text-sm items-center justify-center'>

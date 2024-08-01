@@ -54,14 +54,14 @@ function Bio(){
           </ul>
         </div>
       </div>*/
-      <div className="pt-16 flex flex-col items-center bg-my-blue text-xl sm:flex-row gap-2 pb-4 px-64">
+      <div className="pt-16 flex flex-col items-center bg-my-blue text-xl sm:flex-row gap-2 pb-4 md:px-64">
         <img
           alt="Headshot of Tyler Hopkin"
           src={headshot}
           className="bg-my-green rounded-2xl shadow-md shadow-my-orange max-h-96 w-auto"
         />
-        <div className="text-center text-my-white px-6">
-          <h2 className='text-2xl drop-shadow-md py-4'>Hey! I'm Tyler.</h2>
+        <div className=" text-my-white px-6">
+          <h2 className='text-2xl text-center drop-shadow-md py-4'>Hey! I'm Tyler.</h2>
           <p className='pb-4'>
             I'm a software engineer specializing in web and app development. As a former audio engineer, I discovered a love for energizing an audience; now I create fun digital experiences either that bring even more people joy through personal projects and others' open source ones.
           </p>

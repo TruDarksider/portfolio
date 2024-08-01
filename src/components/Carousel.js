@@ -36,7 +36,7 @@ function Carousel(){
     }
 
     const changeSlide = (e) => {
-        const offset = e.target.getAttribute('data-carousel-button')=="next" ? 1 : -1;
+        const offset = e.target.getAttribute('data-carousel-button')==="next" ? 1 : -1;
         let tempIndex = slideIndex + offset;
           
         handleChange(tempIndex);
@@ -149,20 +149,22 @@ function Carousel(){
           </div>
         </div>*/
         <div className="" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
-          <button
-            className="absolute left-12 text-6xl h-64 border-solid border-2 border-my-blue bg-my-green"
-            data-carousel-button="prev"
-            onClick={changeSlide}
-          >
-            &#60;
-          </button>
-          <button
-            className="absolute right-12 text-6xl h-64 border-solid border-2 border-my-blue bg-my-green"
-            data-carousel-button="next"
-            onClick={changeSlide}
-          >
-            &#62;
-          </button>
+          <div className='flex place-content-evenly'>
+            <button
+              className="flex-grow md:absolute md:left-24 md:text-6xl md:h-64 border-solid border-2 border-my-blue bg-my-green"
+              data-carousel-button="prev"
+              onClick={changeSlide}
+            >
+              &#60;
+            </button>
+            <button
+              className="flex-grow md:absolute md:right-24 md:text-6xl md:h-64 border-solid border-2 border-my-blue bg-my-green"
+              data-carousel-button="next"
+              onClick={changeSlide}
+            >
+              &#62;
+            </button>
+          </div>
           <ul className="flex flex-col gap-4 items-center" data-slides>
             <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2' data-active={project.dataActive}>
                 <img
@@ -172,24 +174,28 @@ function Carousel(){
                 />
                 <div>
                 <div className="flex flex-col items-center justify-center pb-6">
-                    <a
+                <h2 className='text-my-blue text-xl'>{project.title}</h2>
+                    <div className='flex items-center gap-1'>
+                      <a
                         href={project.url}
                         target="_blank"
                         rel="noreferrer"
-                    >
-                        <h2 className='text-xl'>{project.title}</h2>
-                    </a>
-                    <a
+                        className='text-my-black'
+                      >
+                        live site |
+                      </a>
+                      <a
                         href={project.githubRepo}
                         target="_blank"
                         rel="noreferrer"
-                    >
+                      >
                         <img
                             alt={project.githubRepoDesc}
                             src={github}
                             className="h-5 w-auto"
                         />
                     </a>
+                    </div>
                 </div>
                 <p>
                   {project.description}
