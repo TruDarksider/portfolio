@@ -20,9 +20,9 @@ function Header() {
           <div className="hidden sm:block">Tyler Hopkin</div>
         </div>
         <div className="text-my-blue flex place-content-evenly items-center gap-4 md:gap-6">
-          <a href='#about'>About Me</a>
-          <a href='#projects'>Projects</a>
-          <a href='#contact'>Contact</a>
+          <a href='about'>About Me</a>
+          <a href='/'>Projects</a>
+          {/* <a href='contact'>Contact</a> */}
         </div>
       </div>
     );
