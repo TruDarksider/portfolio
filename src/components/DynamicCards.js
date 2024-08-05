@@ -1,4 +1,3 @@
-import github from '../github-original.svg'
 import projects from '../data.json'
 
 function DynamicCards() {
@@ -70,18 +69,15 @@ function DynamicCards() {
                                     rel="noreferrer"
                                     className='text-my-black'
                                 >
-                                live site | 
+                                live site 
                                 </a>
+                                |
                                 <a
                                     href={project.githubRepo}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                <img
-                                    alt={project.githubRepoDesc}
-                                    src={github}
-                                    className="h-5 w-auto"
-                                />
+                                    repo
                                 </a>
                             </div>
                         </div>
