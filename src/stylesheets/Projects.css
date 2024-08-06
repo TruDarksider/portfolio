@@ -21,11 +21,11 @@
     --blue: #2C666E;
 }
 
-a, a:visited {
-    color: rgb(0, 131, 131);
+/* a, a:visited {
+    color: rgb(131, 0, 94);
     text-decoration: none;
 }
-
+ */
 a>h2:hover {
     animation-name: colorFun;
     animation-duration: 3s;
@@ -268,7 +268,7 @@ p{
     background-color: #57a745;
 }
 
-#passport{
+#Passport{
     background-color: #35df79;
 }
 
