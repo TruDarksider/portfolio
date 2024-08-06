@@ -10,7 +10,7 @@
         "description": "Create an account and post a message to a public forum. Become a member using 'pleaseLetMePost1Message'. Reach out for an Admin password.",
         "pills": [
             "Express",
-            "passport",
+            "Passport",
             "Node",
             "MongoDB",
             "Railway"
@@ -24,7 +24,7 @@
         "githubRepo": "https://github.com/TruDarksider/photo-tagging-app",
         "gihubRepoDesc":"GitHub logo linking to Photo Tagging App repository",
         "url": "https://trudarksider.github.io/photo-tagging-app/",
-        "description": "Find the three randomly selected colors among the pixels.",
+        "description": "Find the three randomly selected colors among the pixels from their hexadecimal value alone (and some directional clues after guesses).",
         "pills": [
             "React",
             "Firebase"
