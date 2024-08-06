@@ -11,17 +11,19 @@ function Projects() {
   };
 
     return (
-      <div className="pt-16 flex-col text-center text-md p-6 bg-my-blue">
-        <h1 className='text-2xl py-4 text-my-white'>Projects</h1>
-        <p className='text-my-white'>
-          All links open in a new tab.
-        </p>
-        <div className='text-right text-sm md:pr-60 text-my-white'>
-          {'Carousel view '}
-            {isToggled ? <button className='bg-my-green rounded-2xl p-1' onClick={handleToggle}>ON</button> 
-              : <button className='bg-my-red rounded-2xl p-1' onClick={handleToggle}>OFF</button>}
+      <div className="flex flex-col items-center bg-my-blue">
+        <div className="pt-16 flex flex-col items-center text-md p-6 max-w-7xl">
+          <h1 className='text-2xl py-4 text-my-white'>Projects</h1>
+          <p className='text-my-white'>
+            All links open in a new tab.
+          </p>
+          <div className='text-right text-sm text-my-white self-end'>
+            {'Carousel view '}
+              {isToggled ? <button className='bg-my-green rounded-2xl p-1' onClick={handleToggle}>ON</button> 
+                : <button className='bg-my-red rounded-2xl p-1' onClick={handleToggle}>OFF</button>}
+          </div>
+          {isToggled ? <Carousel/> : <DynamicCards/>}
         </div>
-        {isToggled ? <Carousel/> : <DynamicCards/>}
       </div>
     );
 }
