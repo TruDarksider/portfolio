@@ -6,7 +6,8 @@ import headshot from '../images/editedHeadshot.png'
 function Bio(){
 
     return (
-      <div className="pt-16 flex flex-col items-center bg-my-blue text-xl sm:flex-row gap-2 pb-4 md:px-64">
+      <div className='flex flex-col items-center bg-my-blue'>
+      <div className="pt-16 flex flex-col items-center text-xl sm:flex-row gap-2 pb-4 md:px-64">
         <img
           alt="Headshot of Tyler Hopkin"
           src={headshot}
@@ -51,6 +52,14 @@ function Bio(){
             </li>
           </ul>
         </div>
+        </div>
+        <a href="https://roadmap.sh">
+          <img 
+            className='w-auto'
+            src="https://roadmap.sh/card/wide/66b3cc34e70e3d56229776bf?variant=dark&roadmaps=computer-science%2Cfull-stack%2Cbackend%2Cfrontend" 
+            alt="Profile preview from roadmap.sh: the number of completed subjects, the number of subjects being learned, and discipline of those subjects."
+          />
+        </a>
       </div>
     );
 }
