@@ -81,22 +81,14 @@ function Carousel(){
         <div className="" onTouchStart={handleTouchStart} onTouchEnd={swipeChangeSlide} data-carousel>
           <div className='flex place-content-evenly'>
             <button
-              className="flex-grow md:absolute md:left-24 md:text-6xl md:h-64 border-solid border-2 border-my-blue bg-my-green"
+              className="w-10 border-solid border-2 border-my-blue bg-my-green"
               data-carousel-button="prev"
               onClick={changeSlide}
             >
               &#60;
             </button>
-            <button
-              className="flex-grow md:absolute md:right-24 md:text-6xl md:h-64 border-solid border-2 border-my-blue bg-my-green"
-              data-carousel-button="next"
-              onClick={changeSlide}
-            >
-              &#62;
-            </button>
-          </div>
-          <ul className="flex flex-col gap-4 items-center" data-slides>
-            <li key={project.id} className=' max-w-5xl shadow-md flex flex-col sm:flex-row items-center p-2 bg-my-white' data-active={project.dataActive}>
+            <ul className="flex flex-col gap-4 items-center" data-slides>
+            <li key={project.id} className=' max-w-5xl shadow-md flex flex-col lg:flex-row items-center p-2 bg-my-white' data-active={project.dataActive}>
                 <img
                     className="max-h-64 w-auto"
                     alt={project.imageDesc}
@@ -138,6 +130,15 @@ function Carousel(){
                 </div>
             </li>
           </ul>
+            <button
+              className="w-10 border-solid border-2 border-my-blue bg-my-green"
+              data-carousel-button="next"
+              onClick={changeSlide}
+            >
+              &#62;
+            </button>
+          </div>
+          
           <div className="flex place-content-evenly pt-2" data-dots>
             <div className="h-4 w-4 bg-my-red rounded-lg border-my-green border-2" onClick={goToIndex} id='0'  data-active></div>
             <div className="h-4 w-4 bg-my-blue rounded-lg border-my-green border-2" onClick={goToIndex} id='1'></div>
