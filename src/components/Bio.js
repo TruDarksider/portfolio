@@ -7,7 +7,7 @@ function Bio(){
 
     return (
       <div className='flex flex-col items-center bg-my-blue'>
-      <div className="pt-16 flex flex-col items-center text-xl sm:flex-row gap-2 pb-4 md:px-64">
+      <div className="pt-16 flex flex-col items-center text-xl max-w-7xl sm:flex-row gap-2 pb-4 sm:pl-4">
         <img
           alt="Headshot of Tyler Hopkin"
           src={headshot}
@@ -44,7 +44,7 @@ function Bio(){
             <li>
               <a href="https://www.bungie.net/7/en/User/Profile/3/4611686018485783402?bgn=TruDarksider">
                 <img
-                  alt="Destiny 2 Warlock class icon linking to Tyler's Destiny 2 character"
+                  alt="Destiny 2 Warlock class icon: three equilateral triangles overlapping to form 3 peaks sharing a base."
                   src={warlock}
                   className="h-10 w-auto"
                 />
@@ -55,7 +55,7 @@ function Bio(){
         </div>
         <a href="https://roadmap.sh">
           <img 
-            className='w-auto'
+            className='w-auto pb-4'
             src="https://roadmap.sh/card/wide/66b3cc34e70e3d56229776bf?variant=dark&roadmaps=computer-science%2Cfull-stack%2Cbackend%2Cfrontend" 
             alt="Profile preview from roadmap.sh: the number of completed subjects, the number of subjects being learned, and discipline of those subjects."
           />
