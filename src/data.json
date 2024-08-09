@@ -1,0 +1,73 @@
+[
+    {
+        "id": 0,
+        "title": "Message Board",
+        "image": "MessageBoard.png",
+        "imageDesc": "Preview of the Message Board project",
+        "githubRepo": "https://github.com/TruDarksider/messageboard",
+        "gihubRepoDesc":"GitHub logo linking to Message Board repository",
+        "url": "https://messageboard-production-cd70.up.railway.app",
+        "description": "Create an account and post a message to a public forum. Become a member using 'pleaseLetMePost1Message'. Reach out for an Admin password.",
+        "pills": [
+            "Express",
+            "Passport",
+            "Node",
+            "MongoDB",
+            "Railway"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Match the Color",
+        "image": "PhotoAppScreenShot.png",
+        "imageDesc": "Preview of the Match the Color project",
+        "githubRepo": "https://github.com/TruDarksider/photo-tagging-app",
+        "gihubRepoDesc":"GitHub logo linking to Photo Tagging App repository",
+        "url": "https://trudarksider.github.io/photo-tagging-app/",
+        "description": "Find the three randomly selected colors among the pixels from their hexadecimal value alone (and some directional clues after guesses).",
+        "pills": [
+            "React",
+            "Firebase"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Etch-A-Sketch",
+        "image": "EtchASketch.png",
+        "imageDesc": "Preview of the Etch-A-Sketch project",
+        "githubRepo": "https://github.com/TruDarksider/etch-a-sketch",
+        "gihubRepoDesc":"GitHub logo linking to Message Board repository",
+        "url": "https://trudarksider.github.io/etch-a-sketch/",
+        "description": "Use your mouse to mimic a classic toy inside a browser window. Has the ability to change canvas size as well as drawing color. Showcases DOM manipulation with user selections.",
+        "pills": [
+            "JavaScript"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Knight Travails",
+        "image": "KnightTravails.png",
+        "imageDesc": "Preview of the Knight Travails project",
+        "githubRepo": "https://github.com/TruDarksider/knight-travails",
+        "gihubRepoDesc":"GitHub logo linking to Knight Travails repository",
+        "url": "https://trudarksider.github.io/knight-travails/",
+        "description": "Finds the shortest route for a knight to reach a particular spot on a chessboard using a graph data structure. Board origin is [0,0] in the top left and with [7,7] in the bottom right. User input currently in development.",
+        "pills": [
+            "TypeScript",
+            "Graphs"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Shop",
+        "image": "ShopScreenshot.png",
+        "imageDesc": "Preview of the Shop project",
+        "githubRepo": "https://github.com/TruDarksider/shopping-cart",
+        "gihubRepoDesc":"GitHub logo linking to Shop repository",
+        "url": "https://trudarksider.github.io/shopping-cart/",
+        "description": "Pretend to go shopping for made up items. A React app showcasing variable passing between components.",
+        "pills": [
+            "React"
+        ]
+    }
+]

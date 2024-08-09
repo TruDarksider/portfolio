@@ -21,11 +21,11 @@
     --blue: #2C666E;
 }
 
-a, a:visited {
-    color: rgb(0, 131, 131);
+/* a, a:visited {
+    color: rgb(131, 0, 94);
     text-decoration: none;
 }
-
+ */
 a>h2:hover {
     animation-name: colorFun;
     animation-duration: 3s;
@@ -123,26 +123,17 @@ img{
 }
 
 .newlyUpdated{
-    /* text-shadow: none;
-    background-color: #D45113;
-    position: relative;
-    top: -15%;
-    left: -140%;
-    transform: rotate(-15deg); */
-    position: relative;
+    position: absolute;
     text-shadow: none;
-    /* top: -15%;
-    left: -140%; */
-    top: -45vh;
-    left: -5vw;
-    margin: .5em auto; 
+    top: 0;
+    left: 0;
+    margin: 0; 
     padding: .5em; 
-    /* width: 3em; height: 1em; */
     border-radius: .25em;
     transform: rotate(-20deg) rotateY(20deg);
     background: var(--red);
-  /* font: 2em/4 Century Gothic, Verdana, sans-serif; */
     text-align: center;
+    width: 25vw;
 }
 .newlyUpdated:after{
     position: absolute;
@@ -154,14 +145,45 @@ img{
     background: var(--orage);
 }
 
+.updating{
+    position: relative;
+}
+
+.updating>div>p{
+    position: relative;
+    left: -10%;
+}
+
+.updating>div>div{
+    position: relative;
+    left: -10%;
+}
+
+.noncarousel{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.off{
+    background-color: #AA1155;
+}
+
+.on{
+    background-color: #94C9A9;
+}
+
 p{
     grid-area: p;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .project-area{
-    height: 100vh;
+    /* height: 100vh; */
     flex: 1 0 auto;
     padding-top: 10vh;
+    padding-bottom: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,11 +217,102 @@ p{
     transition-delay: 0ms;
 }
 
+.updating-card{
+    padding-top: 3vh;
+    padding-left: 1vw;
+    display: grid;
+    grid-template-areas: 
+    "img img h2" 
+    "img img p" 
+    "img img p" ;
+    position: absolute;
+}
+
+.pills-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.pill{
+    font-size: large;
+    border-radius: 3vw;
+    padding: .3rem
+}
+
+#Express{
+    background-color: black;
+    color: white
+}
+
+#Firebase{
+    background-color: #dd2c00;
+    color:white
+}
+
+#Graphs{
+    background-color: #8d8d8d;
+}
+
+#JavaScript{
+    background-color: #ed3a4e;
+    color: white;
+}
+
+#MongoDB{
+    background-color: #00ed64;
+}
+
+#Node{
+    background-color: #57a745;
+}
+
+#Passport{
+    background-color: #35df79;
+}
+
+#Railway{
+    background-color: #843acd;
+    color: white
+}
+
+#React{
+    background-color: #58c4dc;
+}
+
+#TypeScript{
+    background-color: #3178c6;
+    color: white;
+}
+
+.project-card-list{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-bottom: 3vh;
+    display: grid;
+    grid-template-areas: 
+    "img img h2" 
+    "img img p" 
+    "img img div" ;
+    position: relative;
+    inset: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
 .screenshot{
     display:grid;
     grid-area: img;
     border-radius: 2%;
     align-self: center;
+}
+
+.toggle{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5vw;
 }
 
 ul {
@@ -209,7 +322,7 @@ ul {
 }
 
 #ktScreenshot {
-    width: 40%;
+    width: 60%;
     padding-left: 25%;
 }
 
@@ -246,25 +359,15 @@ ul {
     }
 
     .newlyUpdated{
-        /* text-shadow: none;
-        background-color: #D45113;
-        position: relative;
-        top: -15%;
-        left: -140%;
-        transform: rotate(-15deg); */
         position: relative;
         text-shadow: none;
-        /* top: -15%;
-        left: -140%; */
         top: -45vh;
         left: -25vw;
         margin: .5em auto; 
         padding: .5em; 
-        /* width: 3em; height: 1em; */
         border-radius: .25em;
         transform: rotate(-20deg) rotateY(20deg);
         background: var(--red);
-      /* font: 2em/4 Century Gothic, Verdana, sans-serif; */
         text-align: center;
     }
     .newlyUpdated:after{
