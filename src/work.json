@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "title": "AV Technician",
+        "company": "Groove Labs",
+        "desc": "Led teams of up to 15 specialists to execute on AV plans for 100+ events with an affinity for being ahead of schedule and achieving high customer satisfaction.",
+        "dates": "June 2021 - July 2022",
+        "location": "Pflugerville, TX"
+    },
+    {
+        "id": 1,
+        "title": "Director, Event Technology I",
+        "company": "Encore Global",
+        "desc": "Promoted from Technician to Lead after 3 months, and then to Director a year after that. Obtained a top 10% productivity ranking in 2020 and was recognized with outstanding customer service awards 12 times.",
+        "dates": "June 2018 - September 2020",
+        "location": "Boston, MA"
+    }
+]
