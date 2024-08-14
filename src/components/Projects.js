@@ -11,7 +11,7 @@ function Projects() {
   };
 
     return (
-      <div className="flex flex-col items-center bg-my-blue">
+      <div className="flex flex-col items-center bg-my-blue min-h-dvh">
         <div className="pt-16 flex flex-col items-center text-md p-6 max-w-7xl">
           <h1 className='text-2xl py-4 text-my-white'>Projects</h1>
           <p className='text-my-white'>

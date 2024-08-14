@@ -14,7 +14,7 @@ function App() {
         <Route path='/about' element={<Bio />} />
         <Route path='/' element={<Projects />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </HashRouter>
   );
 }
