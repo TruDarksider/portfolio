@@ -10,8 +10,9 @@ function Header() {
             <div className="hidden sm:block">Tyler Hopkin</div>
           </div>
           <div className="text-my-blue basis-1/2 flex items-center gap-4 md:gap-8">
-            <a className="basis-1/2" href='#/about'>About Me</a>
-            <a className="basis-1/2" href='/'>Projects</a>
+            <a className="basis-1/3" href='/'>Projects</a>
+            <a className="basis-1/3" href='#/about'>About Me</a>
+            <a className="basis-1/3" href='#/resume'>Resume</a>
           </div>
         </div>
       </div>
