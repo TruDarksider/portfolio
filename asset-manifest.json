@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a80d00a7.css",
-    "main.js": "/static/js/main.218a8d88.js",
+    "main.css": "/static/css/main.df85201c.css",
+    "main.js": "/static/js/main.db52c7dc.js",
     "static/media/editedHeadshot.png": "/static/media/editedHeadshot.ee099a0a141fac0c5fff.png",
     "static/media/D2Warlock.png": "/static/media/D2Warlock.cee3f5ec61bf81f704b0.png",
     "static/media/ShopScreenshot.png": "/static/media/ShopScreenshot.61836e9113b4876ce40c.png",
@@ -10,13 +10,12 @@
     "static/media/KnightTravails.png": "/static/media/KnightTravails.c6f2188c57966c36fc5f.png",
     "static/media/PhotoAppScreenShot.png": "/static/media/PhotoAppScreenShot.6c2b0c7eaa1172ff2523.png",
     "static/media/EtchASketch.png": "/static/media/EtchASketch.300cc639e98c63583b37.png",
-    "static/media/github-original.svg": "/static/media/github-original.3c903c66b2c5334c8c0b80567c4ea422.svg",
     "index.html": "/index.html",
-    "main.a80d00a7.css.map": "/static/css/main.a80d00a7.css.map",
-    "main.218a8d88.js.map": "/static/js/main.218a8d88.js.map"
+    "main.df85201c.css.map": "/static/css/main.df85201c.css.map",
+    "main.db52c7dc.js.map": "/static/js/main.db52c7dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.a80d00a7.css",
-    "static/js/main.218a8d88.js"
+    "static/css/main.df85201c.css",
+    "static/js/main.db52c7dc.js"
   ]
 }
