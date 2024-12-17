@@ -32,13 +32,13 @@
     },
     {
         "id": 2,
-        "title": "Etch-A-Sketch",
-        "image": "EtchASketch.png",
-        "imageDesc": "Preview of the Etch-A-Sketch project",
-        "githubRepo": "https://github.com/TruDarksider/etch-a-sketch",
-        "gihubRepoDesc":"GitHub logo linking to Message Board repository",
-        "url": "https://trudarksider.github.io/etch-a-sketch/",
-        "description": "Use your mouse to mimic a classic toy inside a browser window. Has the ability to change canvas size as well as drawing color. Showcases DOM manipulation with user selections.",
+        "title": "E-Tamagotchi",
+        "image": "TamagotchiSC2.png",
+        "imageDesc": "Preview of the E-Tamagotchi project",
+        "githubRepo": "https://github.com/TruDarksider/Toonagotchi",
+        "gihubRepoDesc":"GitHub logo linking to Toonagotchi repository",
+        "url": "https://trudarksider.github.io/Toonagotchi/",
+        "description": "Built as part of the Codedex Mini Holiday Hackaton, this project emulates a Tamagotchi device with more to come in the future.",
         "pills": [
             "JavaScript"
         ]
